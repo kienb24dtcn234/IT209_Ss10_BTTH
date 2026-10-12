@@ -1,0 +1,17 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: student-api
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:student_db}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:student_user}
+    password: ${DB_PASSWORD:Student@123}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: false
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
